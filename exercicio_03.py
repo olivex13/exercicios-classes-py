@@ -17,23 +17,23 @@ class Retangulo:
     
     def alterar_lados(self):
         novo_comprimento = input("Digite o novo comprimento: ")
-        self.comprimento = novo_comprimento
+        self.comprimento = int(novo_comprimento)
         nova_largura = input("Digite a nova largura: ")
-        self.largura = nova_largura
+        self.largura = int(nova_largura)
         print("Medidas alteradas com sucesso")
     
     def valor_dos_lados(self):
-        comprimento = self.comprimento
-        largura = self.largura
+        comprimento = int(self.comprimento)
+        largura = int(self.largura)
         print(f"O retangulo tem: \n {comprimento}cm de comprimento \n {largura}cm de largura \n")
     
     def calcular_area(self):
-        area = self.comprimento * self.largura
+        area = int(self.comprimento) * int(self.largura)
         return area
        
 
     def calcular_perimetro(self):
-        perimetro = 2 * (self.comprimento + self.largura)
+        perimetro = 2 * (int(self.comprimento) + int(self.largura))
         return perimetro
        
 
@@ -63,4 +63,4 @@ area_do_retangulo = retangulo.calcular_area()
 print(f"A area tem {area_do_retangulo}m²")
 
 perimetro_do_retangulo = retangulo.calcular_perimetro()
-print(f"O perimetro é de {perimetro_do_retangulo} unidades")
+print(f"O perimetro é de {perimetro_do_retangulo} metros")

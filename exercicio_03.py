@@ -28,12 +28,14 @@ class Retangulo:
         print(f"O retangulo tem: \n {comprimento}cm de comprimento \n {largura}cm de largura \n")
     
     def calcular_area(self):
-        area = int(self.comprimento) * int(self.largura)
+        area_cm = int(self.comprimento) * int(self.largura)
+        area = area_cm / 10000
         return area
        
 
     def calcular_perimetro(self):
-        perimetro = 2 * (int(self.comprimento) + int(self.largura))
+        perimetro_cm = 2 * (int(self.comprimento) + int(self.largura))
+        perimetro = perimetro_cm / 100
         return perimetro
        
 
@@ -64,3 +66,6 @@ print(f"A area tem {area_do_retangulo}m²")
 
 perimetro_do_retangulo = retangulo.calcular_perimetro()
 print(f"O perimetro é de {perimetro_do_retangulo} metros")
+print("=" * 60)
+
+print(f"Você vai precisar comprar {area_do_retangulo}m² de piso e {perimetro_do_retangulo} metros de rodapé.")
